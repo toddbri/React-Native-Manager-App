@@ -4,8 +4,9 @@ import { emailChanged } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
 
 class LoginForm extends Component {
+
   onEmailChange(text) {
-    console.log('you typed something');
+    console.log('text: ', text);
     this.props.emailChanged(text);
   }
 
@@ -16,7 +17,7 @@ class LoginForm extends Component {
           <Input
             label="Email"
             placeholder="user@gmail.com"
-            onChangeText={this.onEmailChange.bind(this)}
+            onChangedText={this.onEmailChange.bind(this)}
             value={this.props.email}
           />
         </CardSection>
